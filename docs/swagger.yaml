@@ -1,7 +1,7 @@
 info:
   contact: {}
 paths:
-  /Arrayelement/samesumelement/{arrLen}/{arr}:
+  /arrayelement/samesumelement/{arrLen}/{arr}:
     get:
       parameters:
       - description: arrLen
@@ -24,7 +24,7 @@ paths:
           schema:
             type: string
       tags:
-      - arrayElement
+      - ArrayElement
   /candy/whogetsourcandy/{student}/{candies}/{firstStudent}:
     get:
       parameters:

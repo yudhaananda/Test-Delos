@@ -16,13 +16,13 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/Arrayelement/samesumelement/{arrLen}/{arr}": {
+        "/arrayelement/samesumelement/{arrLen}/{arr}": {
             "get": {
                 "produces": [
                     "application/json"
                 ],
                 "tags": [
-                    "arrayElement"
+                    "ArrayElement"
                 ],
                 "parameters": [
                     {
