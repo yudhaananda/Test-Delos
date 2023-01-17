@@ -27,7 +27,7 @@ func NewArrayElementHandler(arrayElementService services.ArrayElementService) *a
 // @Param arr path []int true "arr"
 // @Produce json
 // @Success 200 {string} SameSumElement
-// @Router /arrayelement/samesumelement/{arrLen}/{arr} [get]
+// @Router /Arrayelement/samesumelement/{arrLen}/{arr} [get]
 func (h *arrayElementHandler) SameSumElement(c *gin.Context) {
 	arrLen, err := strconv.Atoi(c.Param("arrLen"))
 	if err != nil {

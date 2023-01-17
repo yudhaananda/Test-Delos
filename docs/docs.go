@@ -16,7 +16,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/arrayelement/samesumelement/{arrLen}/{arr}": {
+        "/Arrayelement/samesumelement/{arrLen}/{arr}": {
             "get": {
                 "produces": [
                     "application/json"
