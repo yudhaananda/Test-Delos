@@ -3,7 +3,6 @@ package handlers
 import (
 	services "delosTest/Services"
 	"net/http"
-	"strconv"
 
 	"github.com/gin-gonic/gin"
 )
@@ -29,20 +28,14 @@ func NewCandyHandler(candyService services.CandyService) *candyHandler {
 // @Success 200 {string} WhoGetSourCandy
 // @Router /candy/whogetsourcandy/{student}/{candies}/{firstStudent} [get]
 func (h *candyHandler) WhoGetSourCandy(c *gin.Context) {
-	student, err := strconv.Atoi(c.Param("student"))
-	if err != nil {
-		c.JSON(http.StatusBadRequest, "student harus berupa angka")
-	}
-	candies, err := strconv.Atoi(c.Param("candies"))
-	if err != nil {
-		c.JSON(http.StatusBadRequest, "candies harus berupa angka")
-	}
-	firstStudent, err := strconv.Atoi(c.Param("firstStudent"))
-	if err != nil {
-		c.JSON(http.StatusBadRequest, "firstStudent harus berupa angka")
-	}
+	student := c.Param("student")
+	candies := c.Param("candies")
+	firstStudent := c.Param("firstStudent")
 
-	whoGetSourCandy := h.candyService.WhoGetSourCandy(student, candies, firstStudent)
+	whoGetSourCandy, err := h.candyService.WhoGetSourCandy(student, candies, firstStudent)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, err.Error())
+	}
 	c.JSON(http.StatusOK, whoGetSourCandy)
 
 }
