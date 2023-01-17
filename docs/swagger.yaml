@@ -1,0 +1,77 @@
+info:
+  contact: {}
+paths:
+  /arrayelement/samesumelement/{arrLen}/{arr}:
+    get:
+      parameters:
+      - description: arrLen
+        in: path
+        name: arrLen
+        required: true
+        type: integer
+      - description: arr
+        in: path
+        items:
+          type: integer
+        name: arr
+        required: true
+        type: array
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      tags:
+      - arrayElement
+  /candy/whogetsourcandy/{student}/{candies}/{firstStudent}:
+    get:
+      parameters:
+      - description: student
+        in: path
+        name: student
+        required: true
+        type: integer
+      - description: candies
+        in: path
+        name: candies
+        required: true
+        type: integer
+      - description: firstStudent
+        in: path
+        name: firstStudent
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      tags:
+      - Candy
+  /library/bookreturn/{dueDate}/{submitDate}:
+    get:
+      parameters:
+      - description: dueDate Format DD-MM-YYYY
+        in: path
+        name: dueDate
+        required: true
+        type: string
+      - description: submitDate Format DD-MM-YYYY
+        in: path
+        name: submitDate
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      tags:
+      - Library
+swagger: "2.0"
