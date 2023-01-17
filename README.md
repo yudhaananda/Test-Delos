@@ -1,6 +1,6 @@
 # Test-Delos
 
-1. Setelah melakukan run aplikasi di localhost selanjutnya aplikasi dapat dibuka melalui Swagger http://localhost:8080/swagger/index.html
+1. Setelah melakukan run aplikasi di localhost selanjutnya aplikasi dapat dibuka melalui Swagger http://localhost:8080/swagger/index.html atau klik pada link berikut https://test-delos-production.up.railway.app/swagger/index.html
 ![image](https://user-images.githubusercontent.com/49031529/212848131-3e193845-e3a3-41c7-854b-479a3bf77d09.png)
 
 2. Jawaban dari Case 1 terdapat pada tag Library
