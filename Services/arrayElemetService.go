@@ -1,6 +1,9 @@
 package services
 
-import "strconv"
+import (
+	"errors"
+	"strconv"
+)
 
 type ArrayElementService interface {
 	SameSumElement(arrLen int, arr []string) (string, error)
@@ -15,6 +18,9 @@ func NewArrayElementService() *arrayElementService {
 
 func (s *arrayElementService) SameSumElement(arrLen int, arr []string) (string, error) {
 	result := ""
+	if arrLen != len(arr) {
+		return result, errors.New("arrLen tidak sesuai dengan panjang array")
+	}
 	for index := range arr {
 		left := 0
 		right := 0

@@ -36,7 +36,7 @@ func (h *arrayElementHandler) SameSumElement(c *gin.Context) {
 	arr := strings.Split(c.Param("arr"), ",")
 	sameSumElement, err := h.arrayElementService.SameSumElement(arrLen, arr)
 	if err != nil {
-		c.JSON(http.StatusBadRequest, err)
+		c.JSON(http.StatusBadRequest, err.Error())
 	}
 	c.JSON(http.StatusOK, sameSumElement)
 }
